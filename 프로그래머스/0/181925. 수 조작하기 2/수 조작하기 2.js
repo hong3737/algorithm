@@ -6,6 +6,5 @@ function solution(numLog) {
         '-10': "a",
     };
     
-    return numLog.map((v,i)=> input[v>numLog[i+1]? -Math.abs(v-numLog[i+1]) : Math.abs(v-numLog[i+1])]).join("");
-    
+    return numLog.slice(1).map((v,i)=> input[v-numLog[i]]).join("");
 }
