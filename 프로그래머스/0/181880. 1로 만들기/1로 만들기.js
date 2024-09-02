@@ -1,8 +1,7 @@
 function solution(num_list) {
-    return num_list.reduce((s,v)=> {
-        let value = v;
-        while(value>1){
-            value = value%2===0?value/2 : (value-1)/2;
+    return num_list.reduce((s, v)=> {
+        while(v>1){
+            v = v%2===0?v/2 : (v-1)/2;
             s++;
         } 
         return s;
